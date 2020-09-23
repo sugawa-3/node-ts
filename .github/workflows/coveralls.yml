@@ -13,10 +13,9 @@ jobs:
       - uses: actions/checkout@v1
       - name: npm install
         run: |
-          cd ui
           npm install
       - name: Run Coveralls
         uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          path-to-lcov: ui/coverage/lcov.info
+          path-to-lcov: ./coverage/lcov.info
